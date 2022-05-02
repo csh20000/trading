@@ -49,7 +49,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 const Navbar = () => (
   <Box sx={{ flexGrow: 1 }}>
-    <AppBar position="fixed">
+    <AppBar>
       <Toolbar>
         <Button>
           <Link
@@ -69,16 +69,36 @@ const Navbar = () => (
           />
         </Search>
         <Button>
-          <Link to="/explore">Explore</Link>
+          <Link
+            to="/explore"
+            style={{ color: 'white', textDecoration: 'inherit' }}
+          >
+            Explore
+          </Link>
         </Button>
         <Button>
-          <Link to="/stats">Stats</Link>
+          <Link
+            to="/stats"
+            style={{ color: 'white', textDecoration: 'inherit' }}
+          >
+            Stats
+          </Link>
         </Button>
         <Button>
-          <Link to="/about">About</Link>
+          <Link
+            to="/about"
+            style={{ color: 'white', textDecoration: 'inherit' }}
+          >
+            About
+          </Link>
         </Button>
         <Button>
-          <Link to="/login">Login</Link>
+          <Link
+            to="/login"
+            style={{ color: 'white', textDecoration: 'inherit' }}
+          >
+            Login
+          </Link>
         </Button>
       </Toolbar>
     </AppBar>
