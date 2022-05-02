@@ -42,17 +42,22 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     transition: theme.transitions.create('width'),
     width: '100%',
     [theme.breakpoints.up('md')]: {
-      width: '20ch',
+      width: '50ch',
     },
   },
 }));
 
 const Navbar = () => (
   <Box sx={{ flexGrow: 1 }}>
-    <AppBar position="static">
+    <AppBar position="fixed">
       <Toolbar>
         <Button>
-          <Link to="/" color="inherit">Trading Post</Link>
+          <Link
+            to="/"
+            style={{ color: 'white', textDecoration: 'inherit' }}
+          >
+            Trading Post
+          </Link>
         </Button>
         <Search>
           <SearchIconWrapper>
@@ -63,10 +68,18 @@ const Navbar = () => (
             inputProps={{ 'aria-label': 'search' }}
           />
         </Search>
-        <Link to="/explore">Explore</Link>
-        <Link to="/stats">Stats</Link>
-        <Link to="/about">About</Link>
-        <Link to="/login">Login</Link>
+        <Button>
+          <Link to="/explore">Explore</Link>
+        </Button>
+        <Button>
+          <Link to="/stats">Stats</Link>
+        </Button>
+        <Button>
+          <Link to="/about">About</Link>
+        </Button>
+        <Button>
+          <Link to="/login">Login</Link>
+        </Button>
       </Toolbar>
     </AppBar>
   </Box>
