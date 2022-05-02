@@ -14,7 +14,7 @@ import bingBack from '../../assets/bing_bckgrd.jpg';
 
 const Home = () => (
   <>
-    <Box sx={{ flexGrow: 1, mt: 8 }}>
+    <Box sx={{ flexGrow: 1, mt: 9 }}>
       <Grid container spacing={2}>
         <Grid item xs={6}>
           <Typography sx={{

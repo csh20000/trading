@@ -1,5 +1,5 @@
 import Card from '@mui/material/Card';
-import { CardContent, CardMedia, Typography } from '@mui/material';
+import { CardMedia } from '@mui/material';
 import rogerXWhitebeard from '../../assests/images/Roger_X_Whitebeard.jpg';
 
 const HomeCard = () => (
