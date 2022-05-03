@@ -1,16 +1,19 @@
 import Card from '@mui/material/Card';
 import { CardMedia } from '@mui/material';
-import rogerXWhitebeard from '../../assests/images/Roger_X_Whitebeard.jpg';
+import rogerXWhitebeard from '../../assets/images/Roger_X_Whitebeard.jpg';
 
 const HomeCard = () => (
-  <Card sx={{
-    maxWidth: '60%',
-    justifyContent: 'center',
-  }}
+  <Card
+    variant="outlined"
+    sx={{
+      maxWidth: '60%',
+      justifyContent: 'center',
+      border: 1,
+    }}
   >
     <CardMedia
       component="img"
-      height="300vh"
+      height="350vh"
       image={rogerXWhitebeard}
       alt="Marco"
     />
