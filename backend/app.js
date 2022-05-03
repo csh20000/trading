@@ -1,9 +1,11 @@
+const cors = require('cors')
 const express = require('express')
 const mongoose = require('mongoose')
 const config = require('./utils/config')
 
 const app = express()
 app.use(express.json())
+app.use(cors())
 const cardsRouter = require('./controllers/cards')
 
 console.log('connecting to ', config.MONGODB_URI) 
