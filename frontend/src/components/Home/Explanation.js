@@ -1,6 +1,6 @@
 const Explanation = () => (
   <div>
-    Hello
+    Explanation
   </div>
 );
 

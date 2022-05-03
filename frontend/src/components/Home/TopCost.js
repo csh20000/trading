@@ -1,6 +1,6 @@
 const TopCost = () => (
   <div>
-    Hello
+    TopCost
   </div>
 );
 

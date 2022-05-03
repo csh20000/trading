@@ -1,6 +1,6 @@
 const Showcase = () => (
   <div>
-    Hello
+    Showcase
   </div>
 );
 
