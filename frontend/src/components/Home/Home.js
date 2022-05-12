@@ -5,7 +5,7 @@ import Explanation from './Explanation';
 import TopCost from './TopCost';
 
 const Home = () => (
-  <Box>
+  <Box sx={{ backgroundBlendMode: 'color-burn' }}>
     <Introgrid />
     <Showcase />
     <TopCost />

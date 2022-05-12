@@ -48,7 +48,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 const Navbar = () => (
-  <Box sx={{ flexGrow: 1, mb: 10 }}>
+  <Box sx={{ flexGrow: 1 }}>
     <AppBar>
       <Toolbar>
         <Button>
@@ -56,7 +56,7 @@ const Navbar = () => (
             to="/"
             style={{ color: 'white', textDecoration: 'inherit' }}
           >
-            Trading Post
+            Raftel
           </Link>
         </Button>
         <Search>
