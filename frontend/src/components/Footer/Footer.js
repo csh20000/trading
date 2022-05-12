@@ -10,7 +10,6 @@ const Footer = () => (
     sx={{
       backgroundColor: 'primary.main',
       width: '100%',
-      marginLeft: '-8px',
     }}
   >
     <Typography

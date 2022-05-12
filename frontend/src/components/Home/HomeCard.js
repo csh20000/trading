@@ -6,8 +6,7 @@ const HomeCard = () => (
   <Card
     variant="outlined"
     sx={{
-      maxWidth: '60%',
-      justifyContent: 'center',
+      maxWidth: '60vw',
       border: 1,
     }}
   >
@@ -15,7 +14,7 @@ const HomeCard = () => (
       component="img"
       height="350vh"
       image={rogerXWhitebeard}
-      alt="Marco"
+      alt="rogerXWhitebeard"
     />
   </Card>
 );
