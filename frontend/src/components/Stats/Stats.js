@@ -1,7 +1,11 @@
+// 'http://localhost:3003/api/cards'
+import CardInfo from './CardsImport';
+
 const Stats = () => (
-  <div>
-    Stats
-  </div>
+  <>
+    <p>Button below retrieves array of cards</p>
+    <CardInfo />
+  </>
 );
 
 export default Stats;
