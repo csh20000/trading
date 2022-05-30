@@ -7,6 +7,7 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 const cardsRouter = require('./controllers/cards')
+const userRouter = require('./controllers/users')
 
 console.log('connecting to ', config.MONGODB_URI) 
 
@@ -19,5 +20,6 @@ mongoose.connect(config.MONGODB_URI)
   })
 
 app.use('/api/cards', cardsRouter)
+app.use('/api/users', userRouter)
 
 module.exports = app

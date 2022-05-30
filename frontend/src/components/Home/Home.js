@@ -2,6 +2,7 @@ import Box from '@mui/material/Box';
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { initializeCards } from '../../reducers/cardReducer';
+import { initializeUsers } from '../../reducers/userReducer';
 import Introgrid from './Introgrid';
 import Showcase from './Showcase';
 import Explanation from './Explanation';
@@ -12,6 +13,7 @@ const Home = () => {
 
   useEffect(() => {
     dispatch(initializeCards());
+    dispatch(initializeUsers());
   }, [dispatch]);
 
   return (
