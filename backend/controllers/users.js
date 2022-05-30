@@ -1,28 +1,45 @@
-const usersRouter = require('express').Router()
+const bcrypt = require('bcrypt')
+const userRouter = require('express').Router()
 const UserSchema = require('../models/user')
 
-usersRouter.get('/', async (request, response) => {
-  const users = await UserSchema.find({})
-  response.json(cards);
+userRouter.get('/', async (request, response) => {
+  const users = await UserSchema.find({}).populate('cards')
+  response.json(users)
 })
 
-cardsRouter.get('/:id', async (request, response) => {
-  const user = await UserSchema.findById({ _id: request.params.id })
-  if (user) { response.json(user) } 
-  else { response.status(404).end() }
+userRouter.get('/:id', async (request, response) => {
+  const user = await UserSchema.findById(request.params.id)
+  if (user) {
+    response.json(user)
+  } else {
+    response.status(404).end()
+  }
 })
 
-usersRouter.post('/', async (request, response) => {
-    const body = request.body
-    console.log(body)
+userRouter.post('/', async (request, response) => {
+  const { username, name, password, coinValue } = request.body
   
-    const user = new UserSchema({
-      username: body.username,
-      password: body.password,
+  const existingUser = await UserSchema.findOne({ name })
+  if (existingUser) {
+    return response.status(400).json({
+      error: 'name must be unique'
     })
-  
-    const savedUser = await user.save()
-    response.status(201).json(savedUser)
+}
+
+  const saltRounds = 10
+  const passwordHash = await  bcrypt.hash(password, saltRounds)
+
+  const user = new UserSchema({
+    username, 
+    name, 
+    passwordHash,
+    coinValue,
+    totalCardValue: 0,
   })
-  
-  module.exports = usersRouter
+
+  const savedUser = await user.save()
+
+  response.status(201).json(savedUser)
+})
+
+module.exports = userRouter

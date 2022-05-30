@@ -2,7 +2,17 @@ const mongoose = require('mongoose')
 
 const userSchema = new mongoose.Schema({
   username: String,
-  password: String,
+  name: String,
+  passwordHash: String,
+  coinValue: Number,
+  totalCardValue: Number,
+  cards: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'CardInformation'
+    }
+  ]
+
 })
 
 userSchema.set('toJSON', {
@@ -10,7 +20,8 @@ userSchema.set('toJSON', {
     returnedObject.id = returnedObject._id.toString()
     delete returnedObject._id
     delete returnedObject.__v
+    delete returnedObject.passwordHash
   }
 })
 
-module.exports = mongoose.model('UserInformation', userSchema)
+module.exports = mongoose.model('User', userSchema)

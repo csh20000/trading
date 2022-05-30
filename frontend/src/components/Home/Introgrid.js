@@ -54,13 +54,17 @@ const Introgrid = () => (
             >
               Raftel is a fan-made trading platform for One Piece
             </Typography>
-            <Button>
-              <Link to="explore"> Explore </Link>
-            </Button>
-            <Button>
-              <Link to="login"> Login </Link>
-            </Button>
-            <Link to="about"> Learn more about us</Link>
+            <Box sx={{ display: 'flex', justifyContent: 'space-evenly', marginTop: '0.5em' }}>
+              <Button variant="contained">
+                <Link style={{ color: 'black', textDecoration: 'inherit' }} to="explore"> Explore </Link>
+              </Button>
+              <Button variant="contained">
+                <Link style={{ color: 'black', textDecoration: 'inherit' }} to="login"> Register </Link>
+              </Button>
+              <Button variant="contained">
+                <Link style={{ color: 'black', textDecoration: 'inherit' }} to="about"> Learn more about us</Link>
+              </Button>
+            </Box>
           </Box>
         </Grid>
         <Grid item xs={5}>
