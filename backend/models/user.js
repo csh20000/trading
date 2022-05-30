@@ -12,6 +12,7 @@ const userSchema = new mongoose.Schema({
       ref: 'CardInformation'
     }
   ]
+
 })
 
 userSchema.set('toJSON', {
