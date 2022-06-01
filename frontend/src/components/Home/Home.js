@@ -7,6 +7,7 @@ import Introgrid from './Introgrid';
 import Showcase from './Showcase';
 import Explanation from './Explanation';
 import TopCost from './TopCost';
+import ExtraResources from './ExtraResources';
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -22,6 +23,7 @@ const Home = () => {
       <Showcase />
       <TopCost />
       <Explanation />
+      <ExtraResources />
     </Box>
   );
 };
